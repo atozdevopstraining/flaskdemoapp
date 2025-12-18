@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+  packages: write   # 🔴 REQUIRED for GHCR push
+
+  
 jobs:
   build:
     runs-on: ubuntu-latest
